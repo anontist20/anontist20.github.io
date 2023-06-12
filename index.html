@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name&display=swap">
+    <style>
+        .fancy-header {
+            font-family: 'Font Name', cursive;
+            font-size: 36px;
+            text-align: center;
+            text-shadow: 10px 2px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            background-color: rgb(192, 126, 209);
+            border: 1px solid azure;
+            border-radius: 50px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .fancy-header a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .fancy-header a:hover {
+            text-decoration: underline;
+            color: #6ae0e4;
+        }
+
+        body {
+            background-image: url('https://i.seadn.io/gcs/files/42f7e4c328f65fb78974c9a44d937602.png?auto=format&dpr=1&w=1920');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Adjust the opacity value (0.5) as per your preference */
+        }
+
+        .project-description {
+            background-color: rgba(114, 114, 239, 0.9);
+            /* Adjust the color and opacity as per your preference */
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            margin-bottom: 70px;
+            /* Adjust the margin to create space for the footer */
+        }
+
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            height: 150px;
+            /* Adjust the height as per your preference */
+            overflow: hidden;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn-container :hover {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+    </style>
+    <title>Anontist</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Anontist</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- project description -->
+    <div class="container mt-5">
+        <div class="project-description">
+            <h1>Welcome to our NFT Project</h1>
+            <p>Welcome to Anontist, the premier destination for NFT enthusiasts! We are thrilled to present to you our
+                curated collection, "Techy-Guy," featuring a stunning array of popular NFTs. Immerse yourself in the
+                world of cutting-edge technology, where art and innovation collide. Whether you're a seasoned collector
+                or new to the NFT space, our platform offers a seamless experience to explore, discover, and acquire
+                these captivating digital creations. Join us on this exciting journey as we celebrate the boundless
+                possibilities of blockchain technology and the captivating allure of Techy-Guy. Step into a world where
+                art meets technology, and let your imagination run wild with Anontist.</p>
+            <a href="https://opensea.io/" class="btn btn-primary">View on OpenSea</a>
+        </div>
+    </div>
+
+
+    <!-- nft display -->
+    <div class="container mt-5 content">
+        <h2 class="fancy-header"><a href="https://opensea.io/collection/techy-guy" target="_blank">Techy-Guy
+                Collection</a></h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623296332652085249">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/aaa918e69c12747e16132713cfdaf229.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Work from bed - Techy guy 22</b></h5>
+                            <p class="card-text">When you have work from home but you work from bed 🛏️ 🙂</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623353507256729601">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/7b7560cc782a16f275b532c0085abc70.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Matrix - Techy Guy 74</b></h5>
+                            <p class="card-text">The matrix !!..!!..!!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623333716047429633">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/859024d2e994ca83a1a3870a738dcc0f.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Work from bed - Techy guy 22</b></h5>
+                            <p class="card-text">Analytical work !!!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623302929721851905">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/64b203e6b973504ae70c93b8ec3f2ad8.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Aimed - Techy guy 28</b></h5>
+                            <p class="card-text">When you have a goal 🎯</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623327118977662977">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/5dee01e5fc35747f5bf3f3a8baf6f818.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Legend - Techy Guy 50</b></h5>
+                            <p class="card-text">Is this image a legend?</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623349109210218497">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/22eafe7a76a3599c1b373da0898d7aaa.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Modern Chair - Techy Guy 70</b></h5>
+                            <p class="card-text">A good chair for work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623339213605568513">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/460aaa7f1d09f21f62c04016bcd07f01.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Screen Brightness - Techy Guy 61</b></h5>
+                            <p class="card-text">My screen brightness is maximum</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623345810675335169">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/84e907c03908dd824fb834177347e59e.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Wide Laptop - Techy Guy 67</b></h5>
+                            <p class="card-text">When your laptop is wide enough</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623384293582307329">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/2f6f0d83901d986fa08921c9675d8460.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Cool Laptop - Techy Guy 102</b></h5>
+                            <p class="card-text">A several hundred thousand dollar laptop</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623350208721846273">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/fc42f2835b3e388d0dba6db94356815f.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Forest - Techy Guy 71</b></h5>
+                            <p class="card-text">When you have a room in the middle of the forest</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623364502373007361">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/4167607e8df242e5b5deee003d0ac24d.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Corner Table - Techy Guy 84</b></h5>
+                            <p class="card-text">We have our workstation in the corner of our room</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623361203838124033">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/d4133820960ee921748544354685c010.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Programmer - Techy Guy 81</b></h5>
+                            <p class="card-text">We create things</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623360104326496257">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/1df1d64a6a8f68230bf11fc5f205fc6f.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>White Bed - Techy Guy 80</b></h5>
+                            <p class="card-text">Maximum people have white bed-sheet...</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623368900419518465">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/74ef767c5ad486138e33b09ef7ae5e6c.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Backface - Techy Guy 88</b></h5>
+                            <p class="card-text">He can turn is face 180° :0</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623328218489290753">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/640b6e172d220c49dc0d832a873401f5.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Big Bird - Techy Guy 51</b></h5>
+                            <p class="card-text">Have you seen that big bird?</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a target="_blank"
+                    href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/402641430155976874519723601253366591605562787545838901198623375497489285121">
+                    <div class="card">
+                        <img src="https://i.seadn.io/gcs/files/0b7b916ef3c294abb925b22571d732bd.png?auto=format&dpr=1&w=1000"
+                            class="card-img-top" alt="NFT 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Heaven - Techy Guy 94</b></h5>
+                            <p class="card-text">This room is as good as heaven :) :)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+        <div class="btn-container">
+            <a href="https://opensea.io/collection/techy-guy" target="_blank">View more on OpenSea</a>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2023 Anontist. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
