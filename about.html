@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .fancy-header {
+            font-family: 'Font Name', cursive;
+            font-size: 36px;
+            text-align: center;
+            text-shadow: 10px 2px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            background-color: rgb(192, 126, 209);
+            border: 1px solid azure;
+            border-radius: 50px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .fancy-header a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .fancy-header a:hover {
+            text-decoration: underline;
+            color: #6ae0e4;
+        }
+
+        body {
+            background-image: url('https://i.seadn.io/gcs/files/42f7e4c328f65fb78974c9a44d937602.png?auto=format&dpr=1&w=1920');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
+            /* Adjust the opacity value (0.5) as per your preference */
+        }
+
+        .project-description {
+            background-color: rgba(114, 114, 239, 0.9);
+            /* Adjust the color and opacity as per your preference */
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            margin-bottom: 70px;
+            /* Adjust the margin to create space for the footer */
+        }
+
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            height: 150px;
+            /* Adjust the height as per your preference */
+            overflow: hidden;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn-container :hover {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons i {
+            color: #555555;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ffffff;
+        }
+
+        .contentHeader {
+            text-align: center;
+        }
+    </style>
+    <title>Anontist</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Anontist</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://medium.com/@anontist20" target="_blank">Blog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NFT Collections</a>
+                    <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
+                        <a class="dropdown-item" href="https://opensea.io/collection/techy-guy" target="_blank">
+                            <img src="https://i.seadn.io/gcs/files/437696149df98a5070c94a21e0437942.png?auto=format&dpr=1&w=256" alt="" width="30px" height="auto"> Techy-Guy
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social</a>
+                    <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
+                        <a class="dropdown-item" href="https://twitter.com/anontist20" target="_blank">
+                            <i class="bi bi-twitter"></i> Twitter
+                        </a>
+                        <a class="dropdown-item" href="https://www.instagram.com/anontist20/" target="_blank">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                        <a class="dropdown-item" href="https://discord.com/invite/ZM3FsEFurR" target="_blank">
+                            <i class="bi bi-discord"></i> Discord
+                        </a>
+                        <a class="dropdown-item" href="https://t.me/anontist20" target="_blank">
+                            <i class="bi bi-telegram"></i> Telegram
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- project description -->
+    <div class="container mt-5">
+        <div class="project-description">
+            <span class="contentHeader">
+                <h1>Welcome to Anontist</h1>
+            </span>
+            At Anontist, we are passionate about the exciting world of non-fungible tokens (NFTs) and the revolutionary
+            impact they have on the digital art space. We take immense pride in introducing you to our innovative
+            collection called Techy-Guy NFTs. Here, we invite you to embark on a journey of discovery and immerse
+            yourself in the mesmerizing world of digital art.
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="project-description">
+            <span class="contentHeader">
+                <h1>Our Vision</h1>
+            </span>
+            Anontist was founded with a clear vision in mind - to push the boundaries of digital art and revolutionize
+            the NFT landscape. We believe that art has the power to transcend traditional mediums and find its true
+            expression in the digital realm. With Techy-Guy NFTs, we aim to inspire and captivate art enthusiasts and
+            collectors from all walks of life.
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="project-description">
+            <span class="contentHeader">
+                <h1>Community and Transparency</h1>
+            </span>
+            At Anontist, we strongly believe in the power of community and the value it brings to the NFT ecosystem. We
+            foster an inclusive and vibrant community where artists, collectors, and enthusiasts can come together,
+            share their experiences, and celebrate the beauty of digital art. We strive to provide a transparent and
+            trustworthy platform, ensuring that all transactions are secure, and artists receive the recognition and
+            compensation they deserve
+        </div>
+    </div>
+    <div class="container mt-5" style="margin-bottom: 100px;">
+        <div class="project-description">
+            <span class="contentHeader">
+                <h1>Join the Anontist Community</h1>
+            </span>
+            We invite you to join our community and become a part of the Anontist journey. Whether you're an artist
+            looking to showcase your talents, a collector seeking unique and extraordinary NFTs, or simply an enthusiast
+            with a passion for digital art, we have a place for you. Stay updated with the latest news, artist
+            spotlights, and exciting releases by subscribing to our newsletter and following us on social media.
+
+            <ul class="list-inline social-icons">
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/anontist20" target="_blank">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/anontist20/" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://discord.com/invite/ZM3FsEFurR" target="_blank">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://t.me/anontist20" target="_blank">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="https://medium.com/@anontist20/subscribe" class="btn btn-primary" target="_blank">Subscribe to our Newsletter <i class="bi bi-arrow-up-right-square"></i></a>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2023 Anontist. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

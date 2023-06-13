@@ -37,6 +37,7 @@
             background-position: center center;
             background-attachment: fixed;
             background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
             /* Adjust the opacity value (0.5) as per your preference */
         }
 
@@ -106,13 +107,28 @@
             font-weight: bold;
             transform: scale(1.05);
         }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons i {
+            color: #555555;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ffffff;
+        }
     </style>
     <title>Anontist</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Anontist</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Anontist</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -120,26 +136,41 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="https://medium.com/@anontist20" target="_blank">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NFT Collections</a>
+                    <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
+                        <a class="dropdown-item" href="https://opensea.io/collection/techy-guy" target="_blank">
+                            <img src="https://i.seadn.io/gcs/files/437696149df98a5070c94a21e0437942.png?auto=format&dpr=1&w=256" alt="" width="30px" height="auto"> Techy-Guy
+                        </a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/contact.html">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social</a>
                     <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
-                        <a class="dropdown-item" href="https://twitter.com/anontist20">
+                        <a class="dropdown-item" href="https://twitter.com/anontist20" target="_blank">
                             <i class="bi bi-twitter"></i> Twitter
                         </a>
-                        <a class="dropdown-item" href="https://www.instagram.com/anontist20/">
+                        <a class="dropdown-item" href="https://www.instagram.com/anontist20/" target="_blank">
                             <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                        <a class="dropdown-item" href="https://discord.com/invite/ZM3FsEFurR" target="_blank">
+                            <i class="bi bi-discord"></i> Discord
+                        </a>
+                        <a class="dropdown-item" href="https://t.me/anontist20" target="_blank">
+                            <i class="bi bi-telegram"></i> Telegram
                         </a>
                     </div>
                 </li>
@@ -152,6 +183,7 @@
     <div class="container mt-5">
         <div class="project-description">
             <h1>Welcome to our NFT Project</h1>
+
             <p>Welcome to Anontist, the premier destination for NFT enthusiasts! We are thrilled to present to you our
                 curated collection, "Techy-Guy," featuring a stunning array of popular NFTs. Immerse yourself in the
                 world of cutting-edge technology, where art and innovation collide. Whether you're a seasoned collector
@@ -159,7 +191,31 @@
                 these captivating digital creations. Join us on this exciting journey as we celebrate the boundless
                 possibilities of blockchain technology and the captivating allure of Techy-Guy. Step into a world where
                 art meets technology, and let your imagination run wild with Anontist.</p>
-            <a href="https://opensea.io/" class="btn btn-primary">View on OpenSea</a>
+            <a href="https://opensea.io/collection/techy-guy" class="btn btn-primary" target="_blank">View on OpenSea <i class="bi bi-arrow-up-right-square"></i></a>
+
+            <ul class="list-inline social-icons">
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/anontist20" target="_blank">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/anontist20/" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://discord.com/invite/ZM3FsEFurR" target="_blank">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://t.me/anontist20" target="_blank">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </div>
 
