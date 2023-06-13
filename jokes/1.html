@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        .fancy-header {
+            font-family: 'Font Name', cursive;
+            font-size: 36px;
+            text-align: center;
+            text-shadow: 10px 2px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            background-color: rgb(192, 126, 209);
+            border: 1px solid azure;
+            border-radius: 50px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .fancy-header a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .fancy-header a:hover {
+            text-decoration: underline;
+            color: #6ae0e4;
+        }
+
+        body {
+            background-image: url('https://i.seadn.io/gcs/files/42f7e4c328f65fb78974c9a44d937602.png?auto=format&dpr=1&w=1920');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
+            /* Adjust the opacity value (0.5) as per your preference */
+        }
+
+        .project-description {
+            background-color: rgba(114, 114, 239, 0.9);
+            /* Adjust the color and opacity as per your preference */
+            padding: 20px;
+            border-radius: 50px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            margin-bottom: 70px;
+            /* Adjust the margin to create space for the footer */
+        }
+
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            height: 150px;
+            /* Adjust the height as per your preference */
+            overflow: hidden;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn-container :hover {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons i {
+            color: #555555;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ffffff;
+        }
+
+        .contentHeader {
+            text-align: center;
+        }
+
+        .tweet-gallery {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 16px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .tweet-container {
+            scroll-snap-align: start;
+            width: 320px;
+            /* Adjust the width as needed */
+            padding: 8px;
+        }
+    </style>
+    <title>Anontist</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Anontist</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://medium.com/@anontist20" target="_blank">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NFT Collections</a>
+                    <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
+                        <a class="dropdown-item" href="https://opensea.io/collection/techy-guy" target="_blank">
+                            <img src="https://i.seadn.io/gcs/files/437696149df98a5070c94a21e0437942.png?auto=format&dpr=1&w=256"
+                                alt="" width="30px" height="auto"> Techy-Guy
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/jokes/1.html">Jokes</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social</a>
+                    <div class="dropdown-menu dropdown-menu-right fade" aria-labelledby="socialDropdown">
+                        <a class="dropdown-item" href="https://twitter.com/anontist20" target="_blank">
+                            <i class="bi bi-twitter"></i> Twitter
+                        </a>
+                        <a class="dropdown-item" href="https://www.instagram.com/anontist20/" target="_blank">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                        <a class="dropdown-item" href="https://discord.com/invite/ZM3FsEFurR" target="_blank">
+                            <i class="bi bi-discord"></i> Discord
+                        </a>
+                        <a class="dropdown-item" href="https://t.me/anontist20" target="_blank">
+                            <i class="bi bi-telegram"></i> Telegram
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="project-description">
+            <span class="contentHeader">
+                <h1>Stories aka Jokes</h1>
+            </span>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <div class="tweet-gallery">
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM Folks<br>What&#39;s the status of your CHAIR 🤔<br><br>Techy-guy: Can
+                            you fix
+                            my old wooden chair? It keeps crashing.<br><br>Carpenter: I specialize in hardware, not
+                            software
+                            updates. Let&#39;s stick to fixing the legs.<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTs?src=hash&amp;ref_src=twsrc%5Etfw">#NFTs</a> <a
+                                href="https://twitter.com/hashtag/NFTCommmunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommmunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/nftcollector?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollector</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTProjects?src=hash&amp;ref_src=twsrc%5Etfw">#NFTProjects</a>
+                            <a href="https://twitter.com/hashtag/nftart?src=hash&amp;ref_src=twsrc%5Etfw">#nftart</a> <a
+                                href="https://t.co/q6WTNlMtXu">pic.twitter.com/q6WTNlMtXu</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1668344166156480512?ref_src=twsrc%5Etfw">June 12,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM Folks. Do you like Games?<br><br>Techy-guy: &quot;I made a game, wanna
+                            try
+                            it?&quot;<br><br>Pro Gamer: &quot;Sure, what&#39;s the goal?&quot;<br><br>Techy-guy:
+                            &quot;Reach
+                            level 99, but no Wi-Fi for a month.&quot;<br><br>Pro Gamer: &quot;You&#39;re pure
+                            evil!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTs?src=hash&amp;ref_src=twsrc%5Etfw">#NFTs</a> <a
+                                href="https://twitter.com/hashtag/NFTcollections?src=hash&amp;ref_src=twsrc%5Etfw">#NFTcollections</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTCommmunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommmunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTProjects?src=hash&amp;ref_src=twsrc%5Etfw">#NFTProjects</a>
+                            <a href="https://twitter.com/hashtag/nftart?src=hash&amp;ref_src=twsrc%5Etfw">#nftart</a> <a
+                                href="https://twitter.com/hashtag/nftcollector?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollector</a>
+                        </p>&mdash; anontist (@anontist20) <a
+                            href="https://twitter.com/anontist20/status/1668300377668849664?ref_src=twsrc%5Etfw">June
+                            12,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM folks 😎<br><br>Techy-guy: &quot;Hey Harry, did you hear about the
+                            hacker who
+                            got caught?&quot;<br><br>Harry: &quot;Yeah, he accidentally transferred $1 billion to his
+                            own
+                            account!&quot;<br><br>Techy-guy: &quot;Talk about a &#39;ctrl-c&#39;
+                            mistake!&quot;<br><br>Harry:
+                            &quot;Haha, more like an &#39;alt-f4&#39; from freedom!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTs?src=hash&amp;ref_src=twsrc%5Etfw">#NFTs</a> <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a href="https://t.co/93qijhrz2w">pic.twitter.com/93qijhrz2w</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1667569814611820544?ref_src=twsrc%5Etfw">June 10,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM, Tweet-er<br><br>Techy-Guy: &quot;Hey Eagle, did you know there&#39;s
+                            a new
+                            bird app called Tweet-er?&quot;<br><br>Eagle: &quot;Really? I&#39;ll join right away!
+                            I&#39;m ready
+                            to soar high in the virtual flock!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTMarketplace?src=hash&amp;ref_src=twsrc%5Etfw">#NFTMarketplace</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTartist?src=hash&amp;ref_src=twsrc%5Etfw">#NFTartist</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTCollection?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCollection</a>
+                            <a
+                                href="https://twitter.com/hashtag/nftcollectors?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollectors</a>
+                            <a href="https://t.co/rXeYIDlGzj">pic.twitter.com/rXeYIDlGzj</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1667184787096731650?ref_src=twsrc%5Etfw">June 9,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM Guys. Here&#39;s a joke:-<br><br>Carpenter: &quot;Furniture repairs
+                            needed?&quot; <br><br>Techy-Guy: &quot;Nah, got a high-tech standing
+                            desk.&quot;<br><br>Carpenter:
+                            &quot;Wood 3.0 interface?&quot; <br><br>Techy-Guy: &quot;Nah, &#39;Ctrl+Alt+Legroom&#39;
+                            boosts
+                            productivity!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/nftart?src=hash&amp;ref_src=twsrc%5Etfw">#nftart</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/nftcollectors?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollectors</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTProject?src=hash&amp;ref_src=twsrc%5Etfw">#NFTProject</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTartist?src=hash&amp;ref_src=twsrc%5Etfw">#NFTartist</a>
+                            <a href="https://t.co/qxdUpwFjtg">pic.twitter.com/qxdUpwFjtg</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1666714965544247298?ref_src=twsrc%5Etfw">June 8,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">World: Another day, Techy-Guy? Building an app to conquer the
+                            world?<br><br>Techy-Guy: Yup! My world-conquering app is almost ready.<br><br>World: Good
+                            luck, but
+                            don&#39;t forget, I&#39;ve got the ultimate power-off button.<br><br>👉Btw, GM<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/nftcollectors?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollectors</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTProject?src=hash&amp;ref_src=twsrc%5Etfw">#NFTProject</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTartist?src=hash&amp;ref_src=twsrc%5Etfw">#NFTartist</a>
+                            <a href="https://twitter.com/hashtag/nftart?src=hash&amp;ref_src=twsrc%5Etfw">#nftart</a> <a
+                                href="https://t.co/L98gzR8Lgx">pic.twitter.com/L98gzR8Lgx</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1666490210316881920?ref_src=twsrc%5Etfw">June 7,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Barber: &quot;How can I help you today, sir?&quot;<br>Techy-Guy: &quot;I
+                            need a
+                            firmware update for my beard, it&#39;s not syncing properly with my razor.&quot;<br>Barber:
+                            &quot;Well, I can give you a trim, but for firmware updates, you&#39;ll have to consult
+                            Silicon
+                            Valley, not my barber chair!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/nftcollectors?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollectors</a>
+                            <a href="https://t.co/qFTGrINLXE">pic.twitter.com/qFTGrINLXE</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1665916430360117248?ref_src=twsrc%5Etfw">June 6,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Techy-Guy: &quot;Hey Principal, I&#39;ve got an idea! Let&#39;s upgrade
+                            the
+                            school&#39;s computers!&quot;<br><br>Principal: &quot;Upgrade? Why would we do
+                            that?&quot;<br><br>Techy-Guy: &quot;Because the floppy disks we&#39;re using are older than
+                            most of
+                            the students!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTart?src=hash&amp;ref_src=twsrc%5Etfw">#NFTart</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTProject?src=hash&amp;ref_src=twsrc%5Etfw">#NFTProject</a>
+                            <a
+                                href="https://twitter.com/hashtag/NFTartist?src=hash&amp;ref_src=twsrc%5Etfw">#NFTartist</a>
+                            <a href="https://t.co/xhQ1NwUgg6">pic.twitter.com/xhQ1NwUgg6</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1665612256057360387?ref_src=twsrc%5Etfw">June 5,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">GM folks 😎<br><br>Techy-guy: &quot;Hey Harry, did you hear about the
+                            hacker who
+                            got caught?&quot;<br><br>Harry: &quot;Yeah, he accidentally transferred $1 billion to his
+                            own
+                            account!&quot;<br><br>Techy-guy: &quot;Talk about a &#39;ctrl-c&#39;
+                            mistake!&quot;<br><br>Harry:
+                            &quot;Haha, more like an &#39;alt-f4&#39; from freedom!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTs?src=hash&amp;ref_src=twsrc%5Etfw">#NFTs</a> <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a href="https://t.co/93qijhrz2w">pic.twitter.com/93qijhrz2w</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1667569814611820544?ref_src=twsrc%5Etfw">June 10,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Boss: How&#39;s work from home, Techy-Guy?<br><br>Techy-Guy: Great!
+                            I&#39;ve
+                            mastered &quot;snooze-ition&quot; for maximum productivity.<br><br>Boss:
+                            &quot;Snooze-ition&quot;?
+                            Explain.<br><br>Techy-Guy: Ideas flow while dozing. Efficiency at its comfiest!<br><br>Boss:
+                            Haha,
+                            just stay professional. No pillow fights on calls!<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://t.co/iDPH0v3uiR">pic.twitter.com/iDPH0v3uiR</a></p>&mdash; anontist
+                        (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1665540693295616001?ref_src=twsrc%5Etfw">June 5,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Techy-Guy: Hey Google, do you know how owls sleep?<br><br>Google: Of
+                            course! Owls
+                            sleep with their eyes closed, just like any other bird.<br><br>Techy-Guy: Actually, they
+                            sleep with
+                            their eyes wide open!<br><br>Google: Oh, I guess they&#39;re always keeping an
+                            &quot;eye&quot; out
+                            for bugs in their software!<br>:) <a
+                                href="https://t.co/3XECU0jGaT">https://t.co/3XECU0jGaT</a> <a
+                                href="https://t.co/e3Lg8ULRCd">pic.twitter.com/e3Lg8ULRCd</a></p>&mdash; anontist
+                        (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1664971653187530754?ref_src=twsrc%5Etfw">June 3,
+                            2023</a>
+                    </blockquote>
+                </div>
+
+
+
+                <div class="tweet-container">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Techy-guy: &quot;Hey, did you know programming is like life? You spend
+                            hours
+                            debugging just to realize it was your own fault.&quot;<br><br>Programmer: &quot;True, but at
+                            least
+                            in programming, we have stack traces to blame. Life doesn&#39;t give us that luxury!&quot;<a
+                                href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a
+                                href="https://twitter.com/hashtag/NFTCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#NFTCommunity</a>
+                            <a
+                                href="https://twitter.com/hashtag/nftcollectors?src=hash&amp;ref_src=twsrc%5Etfw">#nftcollectors</a>
+                            <a href="https://twitter.com/hashtag/nftart?src=hash&amp;ref_src=twsrc%5Etfw">#nftart</a> <a
+                                href="https://t.co/J7hHVQiUze">pic.twitter.com/J7hHVQiUze</a>
+                        </p>&mdash; anontist (@anontist20)
+                        <a href="https://twitter.com/anontist20/status/1664904752906346499?ref_src=twsrc%5Etfw">June 3,
+                            2023</a>
+                    </blockquote>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2023 Anontist. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
